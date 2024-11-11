@@ -14,8 +14,6 @@ def main():
 
     while True:
 
-        # Capture frame-by-frame
-
         ret, frame = cap.read()
 
         gray_image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -27,9 +25,6 @@ def main():
         for (x, y, w, h) in face:
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 4)
 
-
-
-        # Display the resulting frame
 
         cv2.imshow('Laptop Cam', frame)
 
