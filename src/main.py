@@ -11,7 +11,6 @@ def main():
     )
 
 
-
     while True:
 
         ret, frame = cap.read()
@@ -26,19 +25,15 @@ def main():
             cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 4)
 
 
+        # cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), -1)  # Blue overlay
+        # alpha = 0.4  # Transparency factor
+        # image = cv2.addWeighted(frame, alpha, , 1 - alpha, 0)
+
         cv2.imshow('Laptop Cam', frame)
 
-
-
-        # Press 'q' to exit
-
         if cv2.waitKey(1) & 0xFF == ord('q'):
-
             break
 
-
-
-    # Release capture
 
     cap.release()
 
